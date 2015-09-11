@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">BharatMatrimony</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="name">Name</string>
+    <string name="email">E-mail</string>
+    <string name="mobno">Mobile Number</string>
+    <string name="ccode">+91</string>
+    <string name="religion">Religion</string>
+    <string name="mother_tongue">Mother Tongue</string>
+    <string name="mno">Mobile No.</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="username">Username / Phone No. / Email Id</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="forgot_password_text">Forgot Password ?</string>
+    <string name="register">Register Free !</string>
+    <string name="fb_signin">Facebook Login</string>
+    <string name="forgot_password_email">Enter your email Id or Phone No !</string>
+    <string name="submit">Submit </string>
+    <string name="display_text_register">Find your special someone! Register Free !</string>
+    <string name="OR">OR</string>
+    <string name="profile_for">Matrimony profle for </string>
+    <string name="myself">Myself</string>
+    <string name="dob">Date of Birth</string>
+
+    <string-array name="profile_for">
+        <item>Self</item>
+        <item>Daughter</item>
+        <item>Son</item>
+        <item>Sibling</item>
+        <item>Friend</item>
+        <item>Relative</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="ccode">
+        <item>
+            +91-India
+            +81-US
+            +100-SwitzerLand
+            +61-Phillipins
+            +102-Canada
+            +78-China
+            +86-Srilanka
+            +99-UK
+            +57-Australia
+        </item>
+    </string-array>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="agreement">Please accept <u>Term and Condition</u> !</string>
+    <string name="continue_reg1">Continue</string>
+    <string name="marital_status">Marital Status </string>
+    <string name="country">Country</string>
+    <string name="caste">Caste</string>
+    <string name="almostDone">Congrats ! You are almost done ! </string>
+</resources>

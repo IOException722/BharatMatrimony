@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/parentt"
+    android:background="@drawable/background_image" tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="250dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+      >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/username"
+            android:hint="@string/username"
+            android:background="#FFFFFF"
+            android:visibility="gone"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/password"
+            android:hint="@string/password"
+            android:layout_marginTop="5dp"
+            android:inputType="textPassword"
+            android:background="#FFFFFF"
+            android:drawableRight="@drawable/eye1"
+            android:visibility="gone"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/login"
+            android:text="@string/login"
+            android:background="@color/material_blue_grey_800"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/forgot_password"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            android:text="@string/forgot_password_text"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+        android:paddingTop="15dp"
+        android:background="@color/transparent"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fb_signin"
+            android:id="@+id/fb_signin"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/fb"/>
+
+
+        <View
+            android:id="@+id/dummy_view1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:textColor="@color/white"
+            android:id="@+id/register"
+            android:drawableLeft="@drawable/person"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
