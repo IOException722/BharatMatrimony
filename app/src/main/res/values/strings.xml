@@ -58,4 +58,8 @@
     <string name="country">Country</string>
     <string name="caste">Caste</string>
     <string name="almostDone">Congrats ! You are almost done ! </string>
+    <string name="toggle_turn_on">Yes</string>
+    <string name="toggle_turn_off">NO</string>
+    <string name="about_you">About you (min 50 chars) <u>Need helps?</u></string>
+
 </resources>

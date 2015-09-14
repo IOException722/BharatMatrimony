@@ -4,23 +4,20 @@ import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link RegistrationStep2.OnFragmentInteractionListener} interface
+ * {@link RegistraionStep3.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link RegistrationStep2#newInstance} factory method to
+ * Use the {@link RegistraionStep3#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class RegistrationStep2 extends Fragment {
+public class RegistraionStep3 extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -30,7 +27,6 @@ public class RegistrationStep2 extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    Button mContinue;
     private OnFragmentInteractionListener mListener;
 
     /**
@@ -39,11 +35,11 @@ public class RegistrationStep2 extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment RegistrationStep2.
+     * @return A new instance of fragment RegistraionStep3.
      */
     // TODO: Rename and change types and number of parameters
-    public static RegistrationStep2 newInstance(String param1, String param2) {
-        RegistrationStep2 fragment = new RegistrationStep2();
+    public static RegistraionStep3 newInstance(String param1, String param2) {
+        RegistraionStep3 fragment = new RegistraionStep3();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -51,7 +47,7 @@ public class RegistrationStep2 extends Fragment {
         return fragment;
     }
 
-    public RegistrationStep2() {
+    public RegistraionStep3() {
         // Required empty public constructor
     }
 
@@ -67,21 +63,8 @@ public class RegistrationStep2 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        final View view =  inflater.inflate(R.layout.registration_step2, container, false);
-        mContinue = (Button) view.findViewById(R.id.continue_reg2);
-        mContinue.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                RegistraionStep3 regStep3 = new RegistraionStep3().newInstance("Hi", "Hello !");
-                FragmentManager fragmentManager = getFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.drawer_layout2, regStep3);
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
-            }
-        });
-        return  view;
+        final View view =  inflater.inflate(R.layout.registration_step3, container, false);
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -108,7 +91,6 @@ public class RegistrationStep2 extends Fragment {
         mListener = null;
     }
 
-
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
@@ -119,6 +101,7 @@ public class RegistrationStep2 extends Fragment {
      * "http://developer.android.com/training/basics/fragments/communicating.html"
      * >Communicating with Other Fragments</a> for more information.
      */
+
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         public void onFragmentInteraction(Uri uri);

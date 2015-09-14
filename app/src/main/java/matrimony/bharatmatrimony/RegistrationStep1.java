@@ -27,6 +27,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -45,13 +46,15 @@ import java.util.List;
  * Use the {@link RegistrationStep1#newInstance} factory method to
  * create an instance of this fragment.
  */
+
 public class RegistrationStep1 extends Fragment {
-    EditText mProfileCreatedFor, mSearch, mCountryCode, mMobNo;
+    EditText mProfileCreatedFor, mSearch, mCountryCode, mMobNo, mName;
     DrawerLayout mDrawerLayout;
     MyAdapter myAdapter;
     EditText mDate;
     TextView  mMale, mFemale;
     LayoutInflater mInflater;
+    LayoutInflater mInflaterToast;
     CheckBox mAgreement;
     Button mConinue_reg1;
     boolean ccodeflag, profileforflag;
@@ -109,6 +112,8 @@ public class RegistrationStep1 extends Fragment {
         mProfileCreatedFor = (EditText) view.findViewById(R.id.profile_created_for);
         mListView = (ListView) view.findViewById(R.id.drawer_list_reg_step1);
         mInflater = getActivity().getLayoutInflater();
+        mInflaterToast = getActivity().getLayoutInflater();
+
         mSearch = (EditText)view.findViewById(R.id.search);
         mCountryCode = (EditText) view.findViewById(R.id.ccode);
         mMobNo = (EditText) view.findViewById(R.id.mno);
@@ -117,6 +122,7 @@ public class RegistrationStep1 extends Fragment {
 
         mMale = (TextView) view.findViewById(R.id.gender_male);
         mFemale = (TextView) view.findViewById(R.id.gender_female);
+        mName = (EditText) view.findViewById(R.id.name);
 
         mMale.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -211,22 +217,42 @@ public class RegistrationStep1 extends Fragment {
             @Override
             public void onClick(View v) {
 
-                RegistrationStep2 regStep2 = new RegistrationStep2().newInstance("Hi", "Hello !");
-                FragmentManager fragmentManager = getFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.drawer_layout, regStep2);
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+                if (mName.getText().toString().length()<2) {
+                    View layout = mInflaterToast.inflate(R.layout.toast_layout, (ViewGroup) view.findViewById(R.id.toast_layout_root));
+                    TextView text = (TextView) layout.findViewById(R.id.text);
+                    text.setText("Please enter you name !");
+                    Toast toast = new Toast(getActivity().getApplicationContext());
+                    toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+                    toast.setDuration(Toast.LENGTH_LONG);
+                    toast.setView(layout);
+                    toast.show();
+            /*View layout = inflater.inflate(R.layout.custom_toast,
+                    (ViewGroup) view.findViewById(R.id.toast_layout_root));*/
+
+           /* Toast toast  = Toast.makeText(getContext(), "Please enter your name!", Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.TOP|Gravity.LEFT, 0, 0);*/
+                }
+                if (mName.getText().toString().length()>=2) {
+                    RegistrationStep2 regStep2 = new RegistrationStep2().newInstance("Hi", "Hello !");
+                    FragmentManager fragmentManager = getFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    fragmentTransaction.replace(R.id.drawer_layout, regStep2);
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.commit();
+                }
             }
         });
+
 
         mAgreement.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent termAndCond = new Intent(Intent.ACTION_VIEW, Uri.parse("http://bharatmatrimony.com/terms.php"));
-                startActivity(termAndCond);
+                mAgreement.setChecked(true);
+               /* Intent  termAndCond = new Intent(Intent.ACTION_VIEW, Uri.parse("http://bharatmatrimony.com/terms.php"));
+                startActivity(termAndCond);*/
             }
         });
+
         return view;
     }
 

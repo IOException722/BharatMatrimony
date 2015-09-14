@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    >
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:background="@color/background"
+        android:id="@+id/fragment1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/parent"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="City"
+                android:labelFor="@+id/city"
+                android:paddingTop="15dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/city"
+                android:hint="City"
+                android:background="@color/white"
+                android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="State"
+                android:labelFor="@+id/state"
+                android:paddingTop="5dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/state"
+                android:hint="State"
+                android:background="@color/white"
+                android:inputType="text"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Height"
+                android:labelFor="@+id/height"
+                android:paddingTop="5dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/height"
+                android:hint="Height"
+                android:background="@color/white"
+                android:inputType="text"
+                android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Physical status"
+                android:labelFor="@+id/physical_status"
+                android:paddingTop="5dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/physical_status"
+                android:hint="Physical Status"
+                android:background="@color/white"
+                android:inputType="text"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Education"
+                android:labelFor="@+id/education"
+                android:paddingTop="5dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/education"
+                android:hint="Education"
+                android:background="@color/white"
+                android:inputType="text"
+                android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Occupation"
+                android:labelFor="@+id/occupation"
+                android:paddingTop="5dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/occupation"
+                android:hint="Occupation"
+                android:background="@color/white"
+                android:inputType="text"
+                android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24dp"
+                />
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Employed in"
+                android:labelFor="@+id/employed_in"
+                android:paddingTop="5dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/employed_in"
+                android:hint="Employed in"
+                android:background="@color/white"
+                android:inputType="text"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Annual Income"
+                android:labelFor="@+id/annual_income"
+                android:paddingTop="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/annual_income"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ccode"
+                    android:hint="@string/ccode"
+                    android:background="@color/white"
+                    android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24dp"
+                    android:layout_weight="0.2"
+                    />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mno"
+                    android:hint="@string/mno"
+                    android:background="@color/white"
+                    android:layout_weight="0.7"
+                    android:layout_marginLeft="10dp"
+                    android:inputType="number"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Manglik"
+                android:labelFor="@+id/manglik"
+                android:paddingTop="5dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/manglik"
+                android:hint="Manglik"
+                android:inputType="text"
+                android:background="@color/white"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Family Status"
+                android:labelFor="@+id/family_status"
+                android:paddingTop="5dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/family_status"
+                android:hint="Family Status"
+                android:background="@color/white"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Family Type"
+                android:labelFor="@+id/family_type"
+                android:paddingTop="5dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/family_type"
+                android:hint="Family Type"
+                android:inputType="text"
+                android:background="@color/white"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Family Value"
+                android:labelFor="@+id/family_value"
+                android:paddingTop="5dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/family_value"
+                android:hint="Family Value"
+                android:inputType="text"
+                android:background="@color/white"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/about_you"
+                android:text="@string/about_you"
+                android:paddingTop="5dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/complete_reg"
+                android:text="Complete Registration"
+                android:paddingTop="5dp"
+                android:background="@color/material_blue_grey_950"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/left_drawer"
+        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:orientation="vertical"
+        android:layout_gravity="right"
+        android:background="@color/white"
+        >
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search"
+            >
+        </EditText>
+        <ListView android:id="@+id/drawer_list_reg_step1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:choiceMode="singleChoice"
+            />
+    </LinearLayout>
+
+
+</android.support.v4.widget.DrawerLayout>

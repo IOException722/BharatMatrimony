@@ -15,7 +15,8 @@ import java.util.Iterator;
  * Created by abhay on 10/9/15.
  */
 public class Registrations extends AppCompatActivity implements RegistrationStep1.OnFragmentInteractionListener,
-                                                                RegistrationStep2.OnFragmentInteractionListener{
+                                                                RegistrationStep2.OnFragmentInteractionListener,
+                                                                RegistraionStep3.OnFragmentInteractionListener{
     ArrayList<String> mFragmentTagList;
 
     @Override
